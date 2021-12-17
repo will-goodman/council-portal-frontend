@@ -1,0 +1,19 @@
+
+Button {
+  Container {
+    Row {
+      @media only screen and (min-width: 769px) {
+        h1 {
+          font-size: 40px
+        }
+        
+      }
+      @media only screen and (min-width: 120px) {
+        h1 {
+          font-size: 20px; 
+        }
+               
+      }
+    }
+  }
+}

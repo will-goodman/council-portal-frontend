@@ -1,5 +1,13 @@
 import * as React from 'react';
 import * as GovUK from 'govuk-react';
+import * as ReactBootstrap from 'react-bootstrap';
+import { HouseDoor, Trash, Receipt, Bricks } from 'react-bootstrap-icons';
+import { RiParkingFill, RiMentalHealthLine } from 'react-icons/ri';
+import { MdFamilyRestroom } from 'react-icons/md';
+import { FaBabyCarriage } from 'react-icons/fa';
+import { AiOutlineShop } from 'react-icons/ai';
+import { GiWineBottle } from 'react-icons/gi';
+import ServiceButton from '../../components/ServiceButton';
 
 
 class Home extends React.Component {
@@ -31,7 +39,24 @@ class Home extends React.Component {
                 </div>
               </div>
               <div id="accordion-default-content-1" className="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <p className='govuk-body'>This is the content for Writing well for the web.</p>
+                <ServiceButton serviceName="Council Tax" icon={Receipt} width="25%" />
+                <ServiceButton serviceName="Bins/Recycling" icon={Trash} width="25%" />
+                <ServiceButton serviceName="Parking" icon={RiParkingFill} width="25%" />
+                <ServiceButton serviceName="Housing" icon={HouseDoor} width="25%" />
+                {/* <ReactBootstrap.Container>
+                  <ReactBootstrap.Row style={{height: "50%"}}>
+                    <ServiceButton serviceName="Council Tax" icon={Receipt} width="25%" />
+                    <ServiceButton serviceName="Bins/Recycling" icon={Trash} width="25%" />
+                    <ServiceButton serviceName="Parking" icon={RiParkingFill} width="25%" />
+                    <ServiceButton serviceName="Housing" icon={HouseDoor} width="25%" />
+                  </ReactBootstrap.Row>
+                  <ReactBootstrap.Row style={{height: "50%"}}>
+                    <ServiceButton serviceName="Children & Families" icon={MdFamilyRestroom} width="25%" />
+                    <ServiceButton serviceName="Adult Social Care & Health" icon={RiMentalHealthLine} width="25%" />
+                    <ServiceButton serviceName="Births, Deaths, & Ceremonies" icon={FaBabyCarriage} width="25%" />
+                    <ServiceButton serviceName="Planning & Development" icon={Bricks} width="25%" />
+                  </ReactBootstrap.Row>
+                </ReactBootstrap.Container> */}
               </div>
             </div>
             <div className="govuk-accordion__section ">
@@ -46,7 +71,13 @@ class Home extends React.Component {
                 </div>
               </div>
               <div id="accordion-default-content-2" className="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                <p className='govuk-body'>This is the content for Writing well for specialists.</p>
+                <ReactBootstrap.Container>
+                  <ReactBootstrap.Row>
+                    <ServiceButton serviceName="Business Rates" icon={AiOutlineShop} width="25%" />
+                    <ServiceButton serviceName="Commercial Waste" icon={Trash} width="25%" />
+                    <ServiceButton serviceName="Licensing" icon={GiWineBottle} width="25%" />
+                  </ReactBootstrap.Row>
+                </ReactBootstrap.Container>
               </div>
             </div>
           </div>
