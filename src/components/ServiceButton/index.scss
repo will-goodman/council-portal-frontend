@@ -1,19 +1,17 @@
 
-Button {
-  Container {
-    Row {
-      @media only screen and (min-width: 769px) {
-        h1 {
-          font-size: 40px
-        }
-        
-      }
-      @media only screen and (min-width: 120px) {
-        h1 {
-          font-size: 20px; 
-        }
-               
-      }
-    }
+.service-button {
+  background-color: lightseagreen;
+  border-color: lightseagreen;
+  margin: 5px;
+  text-align: center;
+  height: 100px;
+  width: calc(50% - 10px);
+
+  @media only screen and (min-width: 641px) {
+    width: calc(33% - 10px);
   }
+  @media only screen and (min-width: 769px) {
+    width: calc(25% - 10px);
+  }
+
 }
