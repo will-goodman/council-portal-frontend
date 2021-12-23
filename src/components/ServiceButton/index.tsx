@@ -10,15 +10,14 @@ interface ServiceButtonProps {
 class ServiceButton extends React.Component<ServiceButtonProps> {
 
   render(): React.ReactNode {
-    const Symbol = this.props.icon
+    const Icon = this.props.icon
     return (
         <Button className="service-button">
           <Container>
-            <Row><Symbol style={{height: "40px"}} /></Row>
+            <Row><Icon className="service-button-icon" /></Row>
             <Row><strong>{ this.props.serviceName }</strong></Row>
           </Container>
         </Button>
-      
     )
   }
 
