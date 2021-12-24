@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as GovUK from 'govuk-react';
 import './App.scss';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Home from './pages/Home';
 import PageNotFound from './pages/errors/PageNotFound';
 
@@ -14,11 +14,15 @@ class App extends React.Component {
         <GovUK.TopNav
           bgColor="#20b2aa"
           company={<span className="Logo">RNSLN</span>}
-          serviceTitle="Rinseln Council"
+          serviceTitle={
+            <GovUK.TopNav.Anchor as={Link} to="/">
+              Rinseln Council
+            </GovUK.TopNav.Anchor>
+          }
           children={[
-            <GovUK.TopNav.Anchor key="home">Home</GovUK.TopNav.Anchor>,
-            <GovUK.TopNav.Anchor key="services">Services</GovUK.TopNav.Anchor>,
-            <GovUK.TopNav.Anchor key="news">News</GovUK.TopNav.Anchor>
+            <GovUK.TopNav.NavLink as={Link} to="/">Home</GovUK.TopNav.NavLink>,
+            <GovUK.TopNav.NavLink as={Link} to="/services">Services</GovUK.TopNav.NavLink>,
+            <GovUK.TopNav.NavLink as={Link} to="/news">News</GovUK.TopNav.NavLink>
           ]}
         />
         <GovUK.Page.WidthContainer>
