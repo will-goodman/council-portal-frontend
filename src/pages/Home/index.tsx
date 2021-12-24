@@ -38,14 +38,14 @@ class Home extends React.Component {
                 </div>
               </div>
               <div id="accordion-default-content-1" className="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <ServiceButton serviceName="Council Tax" icon={Receipt} />
-                <ServiceButton serviceName="Bins/Recycling" icon={Trash} />
-                <ServiceButton serviceName="Parking" icon={RiParkingFill} />
-                <ServiceButton serviceName="Housing" icon={HouseDoor} />
-                <ServiceButton serviceName="Children & Families" icon={MdFamilyRestroom} />
-                <ServiceButton serviceName="Adult Social Care & Health" icon={RiMentalHealthLine} />
-                <ServiceButton serviceName="Births, Deaths, & Ceremonies" icon={FaBabyCarriage} />
-                <ServiceButton serviceName="Planning & Development" icon={Bricks} />
+                <ServiceButton serviceName="Council Tax" icon={Receipt} href="services/residents/council-tax"/>
+                <ServiceButton serviceName="Bins/Recycling" icon={Trash} href="services/residents/waste" />
+                <ServiceButton serviceName="Parking" icon={RiParkingFill} href="services/residents/parking" />
+                <ServiceButton serviceName="Housing" icon={HouseDoor} href="services/residents/housing" />
+                <ServiceButton serviceName="Children & Families" icon={MdFamilyRestroom} href="services/residents/children-families" />
+                <ServiceButton serviceName="Adult Social Care & Health" icon={RiMentalHealthLine} href="services/residents/adult-social-care" />
+                <ServiceButton serviceName="Births, Deaths, & Ceremonies" icon={FaBabyCarriage} href="services/residents/ceremonies" />
+                <ServiceButton serviceName="Planning & Development" icon={Bricks} href="services/residents/development" />
               </div>
             </div>
             <div className="govuk-accordion__section ">
@@ -60,9 +60,9 @@ class Home extends React.Component {
                 </div>
               </div>
               <div id="accordion-default-content-2" className="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                <ServiceButton serviceName="Business Rates" icon={AiOutlineShop} />
-                <ServiceButton serviceName="Commercial Waste" icon={Trash} />
-                <ServiceButton serviceName="Licensing" icon={GiWineBottle} /> 
+                <ServiceButton serviceName="Business Rates" icon={AiOutlineShop} href="services/businesses/business-rates" />
+                <ServiceButton serviceName="Commercial Waste" icon={Trash} href="services/businesses/waste" />
+                <ServiceButton serviceName="Licensing" icon={GiWineBottle} href="services/businesses/licensing" /> 
               </div>
             </div>
           </div>

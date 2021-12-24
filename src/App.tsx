@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as GovUK from 'govuk-react';
 import './App.scss';
-import { MemoryRouter as Router, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './pages/Home';
+import PageNotFound from './pages/errors/PageNotFound';
 
 
 class App extends React.Component {
@@ -23,9 +24,12 @@ class App extends React.Component {
         <GovUK.Page.WidthContainer>
           <GovUK.PhaseBanner level="alpha">This is a new service – your feedback will help us to improve it.</GovUK.PhaseBanner>
           <GovUK.Page.Main>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Routes>
+              <Route path="/">
+                <Route index element={<Home />} />
+                <Route path="*" element={<PageNotFound />} />
+              </Route>
+            </Routes>
           </GovUK.Page.Main>
         </GovUK.Page.WidthContainer>
         <footer className="govuk-footer " role="contentinfo">
