@@ -39,7 +39,7 @@ class Home extends React.Component {
               </div>
               <div id="accordion-default-content-1" className="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                 <ServiceButton serviceName="Council Tax" icon={Receipt} href="services/residents/council-tax"/>
-                <ServiceButton serviceName="Bins/Recycling" icon={Trash} href="services/residents/waste" />
+                <ServiceButton serviceName="Rubbish & Recycling" icon={Trash} href="services/residents/waste" />
                 <ServiceButton serviceName="Parking" icon={RiParkingFill} href="services/residents/parking" />
                 <ServiceButton serviceName="Housing" icon={HouseDoor} href="services/residents/housing" />
                 <ServiceButton serviceName="Children & Families" icon={MdFamilyRestroom} href="services/residents/children-families" />

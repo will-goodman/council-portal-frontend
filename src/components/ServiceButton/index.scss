@@ -3,18 +3,27 @@
   background-color: lightseagreen;
   border-color: lightseagreen;
   margin: 5px;
-  text-align: center;
   height: 100px;
-  width: calc(50% - 10px);
+  width: calc(100% - 10px);
 
   @media only screen and (min-width: 641px) {
-    width: calc(33% - 10px);
+    width: calc(50% - 10px);
+
+    // .service-button-icon {
+    //   width: 60px;
+    // }
   }
   @media only screen and (min-width: 769px) {
-    width: calc(25% - 10px);
+    width: calc(50% - 10px);
+
+    // .service-button-icon {
+    //   width: 50px;
+    // }
   }
 
   .service-button-icon {
-    height: 40px;
+    // width: 20%;
+    height: 86px;
+    width: auto;
   }
 }
