@@ -5,25 +5,30 @@
   margin: 5px;
   height: 100px;
   width: calc(100% - 10px);
-
-  @media only screen and (min-width: 641px) {
-    width: calc(50% - 10px);
-
-    // .service-button-icon {
-    //   width: 60px;
-    // }
-  }
+  
   @media only screen and (min-width: 769px) {
     width: calc(50% - 10px);
-
-    // .service-button-icon {
-    //   width: 50px;
-    // }
   }
 
-  .service-button-icon {
-    // width: 20%;
-    height: 86px;
-    width: auto;
+  .service-button-container {
+    width: 100%;
+    height: 100%;
+
+    .service-button-container-row {
+      height: 100%;
+
+      .service-button-icon-col {
+        max-width: 120px;
+    
+        .service-button-icon {
+          height: 86px;
+          width: 86px;
+        }
+      }
+    
+      .service-button-caption {
+        text-align: left;
+      }
+    }
   }
 }
