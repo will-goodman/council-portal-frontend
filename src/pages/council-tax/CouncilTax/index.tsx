@@ -10,6 +10,12 @@ class CouncilTax extends React.Component {
     render(): React.ReactNode {
         return (
             <div>
+                <GovUK.Breadcrumbs>
+                    <GovUK.Breadcrumbs.Link href="/">
+                        Home
+                    </GovUK.Breadcrumbs.Link>
+                    Council Tax
+                </GovUK.Breadcrumbs>
                 <GovUK.H1>Council Tax</GovUK.H1>
             </div>
         )
