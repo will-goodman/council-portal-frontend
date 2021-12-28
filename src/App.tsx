@@ -20,9 +20,9 @@ class App extends React.Component {
             </GovUK.TopNav.Anchor>
           }
           children={[
-            <GovUK.TopNav.NavLink as={Link} to="/">Home</GovUK.TopNav.NavLink>,
-            <GovUK.TopNav.NavLink as={Link} to="/services">Services</GovUK.TopNav.NavLink>,
-            <GovUK.TopNav.NavLink as={Link} to="/news">News</GovUK.TopNav.NavLink>
+            <GovUK.TopNav.NavLink key="home" as={Link} to="/">Home</GovUK.TopNav.NavLink>,
+            <GovUK.TopNav.NavLink key="services" as={Link} to="/services">Services</GovUK.TopNav.NavLink>,
+            <GovUK.TopNav.NavLink key="news" as={Link} to="/news">News</GovUK.TopNav.NavLink>
           ]}
         />
         <GovUK.Page.WidthContainer>
