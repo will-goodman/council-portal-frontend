@@ -4,6 +4,7 @@ import './App.scss';
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Home from './pages/Home';
 import PageNotFound from './pages/errors/PageNotFound';
+import CouncilTax from './pages/council-tax/CouncilTax';
 
 
 class App extends React.Component {
@@ -31,6 +32,7 @@ class App extends React.Component {
             <Routes>
               <Route path="/">
                 <Route index element={<Home />} />
+                <Route path="council-tax" element={<CouncilTax />} />
                 <Route path="*" element={<PageNotFound />} />
               </Route>
             </Routes>
