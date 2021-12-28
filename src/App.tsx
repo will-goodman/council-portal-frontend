@@ -1,7 +1,9 @@
 import * as React from 'react';
 import * as GovUK from 'govuk-react';
 import './App.scss';
-import { MemoryRouter as Router } from "react-router";
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import Home from './pages/Home';
+import PageNotFound from './pages/errors/PageNotFound';
 
 
 class App extends React.Component {
@@ -12,17 +14,26 @@ class App extends React.Component {
         <GovUK.TopNav
           bgColor="#20b2aa"
           company={<span className="Logo">RNSLN</span>}
-          serviceTitle="Rinseln Council"
+          serviceTitle={
+            <GovUK.TopNav.Anchor as={Link} to="/">
+              Rinseln Council
+            </GovUK.TopNav.Anchor>
+          }
           children={[
-            <GovUK.TopNav.Anchor key="home">Home</GovUK.TopNav.Anchor>,
-            <GovUK.TopNav.Anchor key="services">Services</GovUK.TopNav.Anchor>,
-            <GovUK.TopNav.Anchor key="news">News</GovUK.TopNav.Anchor>
+            <GovUK.TopNav.NavLink key="home" as={Link} to="/">Home</GovUK.TopNav.NavLink>,
+            <GovUK.TopNav.NavLink key="services" as={Link} to="/services">Services</GovUK.TopNav.NavLink>,
+            <GovUK.TopNav.NavLink key="news" as={Link} to="/news">News</GovUK.TopNav.NavLink>
           ]}
         />
         <GovUK.Page.WidthContainer>
           <GovUK.PhaseBanner level="alpha">This is a new service – your feedback will help us to improve it.</GovUK.PhaseBanner>
           <GovUK.Page.Main>
-            <GovUK.H1>Rinseln Council</GovUK.H1>
+            <Routes>
+              <Route path="/">
+                <Route index element={<Home />} />
+                <Route path="*" element={<PageNotFound />} />
+              </Route>
+            </Routes>
           </GovUK.Page.Main>
         </GovUK.Page.WidthContainer>
         <footer className="govuk-footer " role="contentinfo">

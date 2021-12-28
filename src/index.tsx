@@ -4,6 +4,9 @@ import './index.scss';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { initAll } from 'govuk-frontend';
+
+initAll()
 
 
 ReactDOM.render(
